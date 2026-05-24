@@ -1,0 +1,36 @@
+name: Update Podcast Feed
+
+on:
+  schedule:
+    # Runs every day at 7:15 AM + 0800 UTC
+    - cron: '15 7 * * *'
+      timezone: 'Asia/Hong_Kong'
+  workflow_dispatch: # Allows you to run it manually
+
+  # Adds the manual "Run workflow" button in the GitHub UI
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Generate RSS XML
+      run: python generate_feed.py
+
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add podcast.xml
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update podcast feed" && git push)
