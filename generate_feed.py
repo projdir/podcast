@@ -6,6 +6,8 @@ from xml.dom import minidom
 # --- CONFIGURATION ---
 BASE_URL = "https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/"  # Replace with the actual base URL
 STATION_NAME = "晨早新聞天地"
+FEED_DESCRIPTION = "Archived episodes of the programme."
+AUTHOR = "Radio Station"
 FEED_URL = "https://projdir.github.io/podcast/podcast.xml" # Update later
 IMAGE_URL = "https://podcast.rthk.hk/podcast/upload_photo/item_photo/1400x1400_916.jpg"
 
@@ -24,10 +26,15 @@ def create_rss():
     channel = ET.SubElement(rss, "channel")
     
     ET.SubElement(channel, "title").text = STATION_NAME
-    ET.SubElement(channel, "link").text = BASE_URL
+    ET.SubElement(channel, "link").text = FEED_URL
     ET.SubElement(channel, "description").text = f"Custom archive feed for {STATION_NAME}"
     ET.SubElement(channel, "language").text = "zh-CN"
 
+    # iTunes Specific Fields for AntennaPod compatibility
+    ET.SubElement(channel, "itunes:author").text = AUTHOR
+    ET.SubElement(channel, "itunes:summary").text = FEED_DESCRIPTION
+    ET.SubElement(channel, "itunes:explicit").text = "no"
+    
     # Podcast Artwork Image
     image = ET.SubElement(channel, "image")
     ET.SubElement(image, "url").text = IMAGE_URL
