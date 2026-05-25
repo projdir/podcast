@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns_itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>晨早新聞天地</title>
-    <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/</link>
+    <link>https://projdir.github.io/podcast/podcast.xml</link>
     <description>Custom archive feed for 晨早新聞天地</description>
     <language>zh-CN</language>
     <item>
