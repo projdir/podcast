@@ -27,7 +27,14 @@ def create_rss():
     ET.SubElement(channel, "link").text = BASE_URL
     ET.SubElement(channel, "description").text = f"Custom archive feed for {STATION_NAME}"
     ET.SubElement(channel, "language").text = "zh-CN"
-    ET.SubElement(channel, 'itunes:image', {'href': IMAGE_URL})
+
+    # Podcast Artwork Image
+    image = ET.SubElement(channel, "image")
+    ET.SubElement(image, "url").text = IMAGE_URL
+    ET.SubElement(image, "title").text = STATION_NAME
+    ET.SubElement(image, "link").text = FEED_URL
+    
+    itunes_image = ET.SubElement(channel, "itunes:image", href=IMAGE_URL)    
 
     # 2. Generate dates to check (e.g., the last 3 days)
     today = datetime.date.today()
