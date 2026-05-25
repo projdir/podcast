@@ -31,9 +31,9 @@ def create_rss():
     ET.SubElement(channel, "language").text = "zh-CN"
 
     # iTunes Specific Fields for AntennaPod compatibility
-    # ET.SubElement(channel, "itunes:author").text = AUTHOR
-    # ET.SubElement(channel, "itunes:summary").text = FEED_DESCRIPTION
-    # ET.SubElement(channel, "itunes:explicit").text = "no"
+    ET.SubElement(channel, "itunes:author").text = AUTHOR
+    ET.SubElement(channel, "itunes:summary").text = FEED_DESCRIPTION
+    ET.SubElement(channel, "itunes:explicit").text = "no"
     
     # Podcast Artwork Image
     # image = ET.SubElement(channel, "image")
