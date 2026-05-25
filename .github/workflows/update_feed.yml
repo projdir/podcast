@@ -3,7 +3,7 @@ name: Update Podcast Feed
 on:
   schedule:
     # Runs every day at 7:16 AM + 0800 UTC
-    - cron: '35 14 * * *'
+    - cron: '16 23 * * *'
     # - cron: '16 7 * * 1-5'
       # timezone: 'Asia/Hong_Kong'
   workflow_dispatch: # Allows you to run it manually
