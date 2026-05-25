@@ -6,6 +6,13 @@
     <description>Custom archive feed for Radio Station</description>
     <language>zh-CN</language>
     <item>
+      <title>Episode 2026-05-25</title>
+      <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260525.m4a</link>
+      <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260525.m4a</guid>
+      <pubDate>Mon, 25 May 2026 12:00:00 +0000</pubDate>
+      <enclosure url="https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260525.m4a" length="0" type="audio/mp4"/>
+    </item>
+    <item>
       <title>Episode 2026-05-24</title>
       <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260524.m4a</link>
       <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260524.m4a</guid>
@@ -207,13 +214,6 @@
       <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260426.m4a</guid>
       <pubDate>Sun, 26 Apr 2026 12:00:00 +0000</pubDate>
       <enclosure url="https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260426.m4a" length="0" type="audio/mp4"/>
-    </item>
-    <item>
-      <title>Episode 2026-04-25</title>
-      <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260425.m4a</link>
-      <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260425.m4a</guid>
-      <pubDate>Sat, 25 Apr 2026 12:00:00 +0000</pubDate>
-      <enclosure url="https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260425.m4a" length="0" type="audio/mp4"/>
     </item>
   </channel>
 </rss>
