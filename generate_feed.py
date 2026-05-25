@@ -41,7 +41,7 @@ def create_rss():
     ET.SubElement(image, "title").text = STATION_NAME
     ET.SubElement(image, "link").text = FEED_URL
     
-    itunes_image = ET.SubElement(channel, "itunes:image", href=IMAGE_URL)    
+    # itunes_image = ET.SubElement(channel, "itunes:image", href=IMAGE_URL)    
 
     # 2. Generate dates to check (e.g., the last 3 days)
     today = datetime.date.today()
