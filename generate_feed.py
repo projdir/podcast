@@ -7,6 +7,7 @@ from xml.dom import minidom
 BASE_URL = "https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/"  # Replace with the actual base URL
 STATION_NAME = "晨早新聞天地"
 FEED_URL = "https://projdir.github.io/podcast/podcast.xml" # Update later
+ITUNES_IMAGE = "https://podcast.rthk.hk/podcast/upload_photo/item_photo/1400x1400_916.jpg"
 
 def check_url_exists(url):
     """Checks if the audio file actually exists on the server."""
@@ -26,7 +27,7 @@ def create_rss():
     ET.SubElement(channel, "link").text = BASE_URL
     ET.SubElement(channel, "description").text = f"Custom archive feed for {STATION_NAME}"
     ET.SubElement(channel, "language").text = "zh-CN"
-    # ET.SubElement(channel, "itunes:image", href="https://podcast.rthk.hk/podcast/upload_photo/item_photo/1400x1400_916.jpg").text = ""
+    ET.SubElement(channel, 'itunes:image', {'href': ITUNES_IMAGE})
 
     # 2. Generate dates to check (e.g., the last 3 days)
     today = datetime.date.today()
