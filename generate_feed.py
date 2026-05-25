@@ -5,10 +5,8 @@ from xml.dom import minidom
 
 # --- CONFIGURATION ---
 BASE_URL = "https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/"  # Replace with the actual base URL
-STATION_NAME = "Radio Station"
+STATION_NAME = "晨早新聞天地"
 FEED_URL = "https://projdir.github.io/podcast/podcast.xml" # Update later
-# https://github.com/projdir/podcast
-
 
 def check_url_exists(url):
     """Checks if the audio file actually exists on the server."""
@@ -19,7 +17,6 @@ def check_url_exists(url):
     except Exception:
         return False
 
-
 def create_rss():
     # 1. Initialize RSS structure
     rss = ET.Element("rss", version="2.0", xmlns_itunes="http://www.itunes.com/dtds/podcast-1.0.dtd")
@@ -29,10 +26,11 @@ def create_rss():
     ET.SubElement(channel, "link").text = BASE_URL
     ET.SubElement(channel, "description").text = f"Custom archive feed for {STATION_NAME}"
     ET.SubElement(channel, "language").text = "zh-CN"
+    ET.SubElement(channel, "itunes:image", href="https://podcast.rthk.hk/podcast/upload_photo/item_photo/1400x1400_916.jpg")
 
-    # 2. Generate dates to check (e.g., the last 30 days)
+    # 2. Generate dates to check (e.g., the last 3 days)
     today = datetime.date.today()
-    for i in range(30):
+    for i in range(3):
         current_date = today - datetime.timedelta(days=i)
         date_str = current_date.strftime("%Y%m%d")
         episode_url = f"{BASE_URL}{date_str}.m4a"
@@ -40,7 +38,7 @@ def create_rss():
         # Check if the episode exists before adding it
         if check_url_exists(episode_url):
             item = ET.SubElement(channel, "item")
-            ET.SubElement(item, "title").text = f"Episode {current_date.strftime('%Y-%m-%d')}"
+            ET.SubElement(item, "title").text = f"晨早新聞天地 {current_date.strftime('%Y-%m-%d')}"
             ET.SubElement(item, "link").text = episode_url
             ET.SubElement(item, "guid", isPermaLink="true").text = episode_url
             
