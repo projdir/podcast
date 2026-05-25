@@ -5,6 +5,11 @@
     <link>https://projdir.github.io/podcast/podcast.xml</link>
     <description>Custom archive feed for 晨早新聞天地</description>
     <language>zh-CN</language>
+    <image>
+      <url>https://podcast.rthk.hk/podcast/upload_photo/item_photo/1400x1400_916.jpg</url>
+      <title>晨早新聞天地</title>
+      <link>https://projdir.github.io/podcast/podcast.xml</link>
+    </image>
     <item>
       <title>晨早新聞天地 2026-05-25</title>
       <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260525.m4a</link>
