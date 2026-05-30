@@ -1,4 +1,5 @@
 import datetime
+import ZoneInfo
 import urllib.request
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
@@ -44,7 +45,9 @@ def create_rss():
     # itunes_image = ET.SubElement(channel, "itunes:image", href=IMAGE_URL)    
 
     # 2. Generate dates to check (e.g., the last 3 days)
-    today = datetime.date.today()
+    hk_tz = ZoneInfo("Asia/Hong_Kong")
+    today = datetime.now(tz).date()
+    # today = datetime.date.today()
     for i in range(3):
         current_date = today - datetime.timedelta(days=i)
         date_str = current_date.strftime("%Y%m%d")
