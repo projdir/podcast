@@ -45,7 +45,7 @@ def create_rss():
     # itunes_image = ET.SubElement(channel, "itunes:image", href=IMAGE_URL)    
 
     # 2. Generate dates to check (e.g., the last 3 days)
-    hk_tz = ZoneInfo("Asia/Hong_Kong")
+    tz = ZoneInfo("Asia/Hong_Kong")
     today = datetime.now(tz).date()
     # today = datetime.date.today()
     for i in range(3):
