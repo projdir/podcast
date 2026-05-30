@@ -46,7 +46,7 @@ def create_rss():
 
     # 2. Generate dates to check (e.g., the last 3 days)
     tz = ZoneInfo("Asia/Hong_Kong")
-    today = datetime.now(tz).date()
+    today = datetime.datetime.now(tz).date()
     # today = datetime.date.today()
     for i in range(3):
         current_date = today - datetime.timedelta(days=i)
