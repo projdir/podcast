@@ -11,6 +11,13 @@
       <link>https://projdir.github.io/podcast/podcast.xml</link>
     </image>
     <item>
+      <title>晨早新聞天地 2026-06-01</title>
+      <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260601.m4a</link>
+      <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260601.m4a</guid>
+      <pubDate>Mon, 01 Jun 2026 12:00:00 +0000</pubDate>
+      <enclosure url="https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260601.m4a" length="0" type="audio/mp4"/>
+    </item>
+    <item>
       <title>晨早新聞天地 2026-05-31</title>
       <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260531.m4a</link>
       <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260531.m4a</guid>
@@ -23,13 +30,6 @@
       <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260530.m4a</guid>
       <pubDate>Sat, 30 May 2026 12:00:00 +0000</pubDate>
       <enclosure url="https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260530.m4a" length="0" type="audio/mp4"/>
-    </item>
-    <item>
-      <title>晨早新聞天地 2026-05-29</title>
-      <link>https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260529.m4a</link>
-      <guid isPermaLink="true">https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260529.m4a</guid>
-      <pubDate>Fri, 29 May 2026 12:00:00 +0000</pubDate>
-      <enclosure url="https://archive.rthk.hk/mp3/radio/archive/radio1/hktoday/m4a/20260529.m4a" length="0" type="audio/mp4"/>
     </item>
   </channel>
 </rss>
